@@ -10,9 +10,19 @@
   <meta name="description"
         content="Remy Marras – Studio Privato di Alta Performance a Cagliari. Personal Training, EMS, preparazione atletica, valutazione funzionale e massaggi personalizzati.">
 
+  <!-- LOGO AS BROWSER ICON / THUMBNAIL -->
+  <link rel="icon" type="image/png" href="RM_logo_black.png">
+  <link rel="apple-touch-icon" href="RM_logo_black.png">
+
+  <!-- SOCIAL SHARING THUMBNAIL -->
+  <meta property="og:title" content="Remy Marras | Studio Privato di Alta Performance">
+  <meta property="og:description" content="Personal Training · EMS · Performance · Cagliari">
+  <meta property="og:image" content="RM_logo_black.png">
+  <meta property="og:type" content="website">
+
+  <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
@@ -105,7 +115,7 @@
       width: 100%;
       z-index: 1000;
 
-      background: rgba(5, 5, 5, 0.90);
+      background: rgba(5, 5, 5, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
 
@@ -115,13 +125,13 @@
     .nav-inner {
       max-width: 1300px;
       margin: auto;
-      padding: 10px 6%;
+      padding: 9px 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      min-height: 80px;
+      min-height: 76px;
     }
 
     .brand {
@@ -130,7 +140,7 @@
     }
 
     .nav-logo {
-      height: 62px;
+      height: 58px;
       width: auto;
       object-fit: contain;
     }
@@ -150,7 +160,7 @@
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #fff;
     }
 
 
@@ -179,14 +189,14 @@
     }
 
     .button-primary {
-      background: white;
-      color: black;
-      border-color: white;
+      background: #fff;
+      color: #000;
+      border-color: #fff;
     }
 
     .button:hover {
       background: #ddd;
-      color: black;
+      color: #000;
       border-color: #ddd;
     }
 
@@ -201,7 +211,7 @@
       display: flex;
       align-items: center;
 
-      padding-top: 150px;
+      padding-top: 145px;
 
       position: relative;
       overflow: hidden;
@@ -209,39 +219,50 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,0.96) 0%,
-          rgba(0,0,0,0.80) 45%,
-          rgba(0,0,0,0.35) 100%
+          rgba(0,0,0,1) 0%,
+          rgba(0,0,0,0.96) 25%,
+          rgba(0,0,0,0.75) 52%,
+          rgba(0,0,0,0.22) 100%
         ),
-        url("remy-hero.jpg");
+        url("remy.jpg");
 
       background-size: cover;
-      background-position: center;
+      background-position: 70% center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          0deg,
+          rgba(0,0,0,0.55) 0%,
+          transparent 35%,
+          rgba(0,0,0,0.08) 100%
+        );
+
+      pointer-events: none;
     }
 
     .hero-content {
-      max-width: 780px;
+      max-width: 760px;
       position: relative;
       z-index: 2;
     }
 
-    .hero-logo {
-      width: 210px;
-      height: auto;
-      margin-bottom: 35px;
-    }
-
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 7rem);
-      line-height: 0.95;
-      letter-spacing: 0.06em;
+      font-size: clamp(3.3rem, 8vw, 7rem);
+      line-height: 0.9;
+      letter-spacing: 0.055em;
     }
 
     .hero-subtitle {
-      margin-top: 20px;
+      margin-top: 24px;
 
-      font-size: 0.85rem;
-      letter-spacing: 0.32em;
+      font-size: 0.78rem;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
 
       color: #bbb;
@@ -250,16 +271,16 @@
     .hero-slogan {
       margin-top: 55px;
 
-      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-size: clamp(1rem, 2vw, 1.35rem);
       letter-spacing: 0.16em;
 
       text-transform: uppercase;
-      color: white;
+      color: #fff;
     }
 
 
     /* =========================
-       INTRO / BENEFITS
+       INTRO
     ========================= */
 
     .intro {
@@ -349,8 +370,9 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,0.98),
-          rgba(0,0,0,0.65)
+          rgba(0,0,0,0.99),
+          rgba(0,0,0,0.82) 45%,
+          rgba(0,0,0,0.35)
         ),
         url("ems.jpg");
 
@@ -384,23 +406,24 @@
 
 
     /* =========================
-       REMY
+       ABOUT REMY
     ========================= */
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 85px;
       align-items: center;
     }
 
     .about-image {
-      min-height: 600px;
+      min-height: 650px;
 
       background:
         linear-gradient(
-          rgba(0,0,0,0.05),
-          rgba(0,0,0,0.5)
+          0deg,
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.02)
         ),
         url("remy.jpg");
 
@@ -410,6 +433,7 @@
 
     .about-copy p {
       margin-bottom: 20px;
+      max-width: 550px;
     }
 
 
@@ -432,7 +456,6 @@
     .studio-item {
       padding: 40px 20px;
       text-align: center;
-
       border-right: 1px solid #222;
     }
 
@@ -453,7 +476,7 @@
 
 
     /* =========================
-       CTA
+       FINAL CTA
     ========================= */
 
     .cta {
@@ -477,7 +500,7 @@
     ========================= */
 
     footer {
-      padding: 65px 7% 110px;
+      padding: 70px 7% 110px;
 
       text-align: center;
 
@@ -485,7 +508,7 @@
     }
 
     .footer-logo {
-      width: 180px;
+      width: 190px;
       height: auto;
       margin: 0 auto 25px;
     }
@@ -510,11 +533,12 @@
 
       font-size: 0.75rem;
       color: #777;
+      line-height: 1.9;
     }
 
 
     /* =========================
-       MOBILE ACTIONS
+       MOBILE BOTTOM BAR
     ========================= */
 
     .mobile-actions {
@@ -533,11 +557,11 @@
       }
 
       .nav-inner {
-        min-height: 70px;
+        min-height: 68px;
       }
 
       .nav-logo {
-        height: 52px;
+        height: 50px;
       }
 
       .nav-links {
@@ -546,11 +570,33 @@
 
       .hero {
         min-height: 92vh;
-        background-position: 65% center;
+
+        padding-top: 120px;
+
+        background:
+          linear-gradient(
+            0deg,
+            rgba(0,0,0,0.98) 0%,
+            rgba(0,0,0,0.82) 35%,
+            rgba(0,0,0,0.20) 100%
+          ),
+          url("remy.jpg");
+
+        background-size: cover;
+        background-position: 58% center;
+      }
+
+      .hero-content {
+        align-self: flex-end;
+        padding-bottom: 55px;
       }
 
       .hero h1 {
         font-size: 3.2rem;
+      }
+
+      .hero-slogan {
+        margin-top: 35px;
       }
 
       .benefits,
@@ -571,7 +617,8 @@
       }
 
       .about-image {
-        min-height: 480px;
+        min-height: 520px;
+        background-position: center;
       }
 
       .technology {
@@ -612,8 +659,8 @@
       }
 
       .mobile-actions a:first-child {
-        background: white;
-        color: black;
+        background: #fff;
+        color: #000;
       }
 
       .mobile-actions a:last-child {
@@ -629,18 +676,23 @@
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
   <div class="nav-inner">
 
     <a href="#home" class="brand">
+
       <img
         src="RM_logo_black.png"
         alt="Remy Marras"
         class="nav-logo">
+
     </a>
+
 
     <div class="nav-links">
 
@@ -657,7 +709,9 @@
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -682,6 +736,7 @@
         Più forte di ieri.<br>
         Pronto per domani.
       </div>
+
 
       <div class="buttons">
 
@@ -710,7 +765,9 @@
 </section>
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="intro">
 
@@ -725,16 +782,15 @@
       Il tuo obiettivo.
     </h2>
 
-    <div class="silver-line"
-         style="margin:25px auto;">
+    <div
+      class="silver-line"
+      style="margin:25px auto;">
     </div>
 
     <p class="intro-text">
-
       Un allenamento costruito intorno a te,
       in uno studio privato dove ogni sessione
       è dedicata al tuo percorso.
-
     </p>
 
 
@@ -783,7 +839,9 @@
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section class="services" id="servizi">
 
@@ -800,6 +858,7 @@
 
 
     <div class="service-grid">
+
 
       <div class="service">
 
@@ -823,7 +882,7 @@
 
         <p>
           Tecnologia avanzata integrata
-          nel percorso di allenamento.
+          nel tuo percorso di allenamento.
         </p>
 
       </div>
@@ -852,7 +911,7 @@
         </h3>
 
         <p>
-          Partire dal tuo punto di partenza
+          Conoscere il tuo punto di partenza
           per costruire il percorso giusto.
         </p>
 
@@ -890,6 +949,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -897,7 +957,9 @@
 </section>
 
 
-<!-- TECHNOLOGY -->
+<!-- =========================
+     TECHNOLOGY
+========================= -->
 
 <section class="technology" id="tecnologia">
 
@@ -914,6 +976,7 @@
         si adatta a te.
       </h2>
 
+
       <div class="tech-stat">
 
         Oltre 300 muscoli.
@@ -923,6 +986,7 @@
         </span>
 
       </div>
+
 
       <p>
         La tecnologia EMS si integra
@@ -938,13 +1002,16 @@
 </section>
 
 
-<!-- REMY -->
+<!-- =========================
+     REMY
+========================= -->
 
 <section id="remy">
 
   <div class="container">
 
     <div class="about-grid">
+
 
       <div class="about-image"></div>
 
@@ -961,6 +1028,7 @@
         </h2>
 
         <div class="silver-line"></div>
+
 
         <p>
           Ogni persona parte da un punto diverso
@@ -989,7 +1057,9 @@
 </section>
 
 
-<!-- STUDIO -->
+<!-- =========================
+     STUDIO
+========================= -->
 
 <section class="studio" id="studio">
 
@@ -1043,7 +1113,9 @@
 </section>
 
 
-<!-- FINAL CTA -->
+<!-- =========================
+     FINAL CTA
+========================= -->
 
 <section class="cta" id="contatti">
 
@@ -1089,7 +1161,9 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1119,7 +1193,9 @@
 </footer>
 
 
-<!-- MOBILE ACTION BAR -->
+<!-- =========================
+     MOBILE ACTION BAR
+========================= -->
 
 <div class="mobile-actions">
 
