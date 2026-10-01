@@ -10,27 +10,40 @@
   <meta name="description"
         content="Remy Marras – Studio Privato di Alta Performance a Cagliari. Personal Training, EMS, preparazione atletica, valutazione funzionale e massaggi personalizzati.">
 
-  <!-- LOGO AS BROWSER ICON / THUMBNAIL -->
+  <!-- LOGO / FAVICON -->
   <link rel="icon" type="image/png" href="RM_logo_black.png">
   <link rel="apple-touch-icon" href="RM_logo_black.png">
 
-  <!-- SOCIAL SHARING THUMBNAIL -->
-  <meta property="og:title" content="Remy Marras | Studio Privato di Alta Performance">
-  <meta property="og:description" content="Personal Training · EMS · Performance · Cagliari">
-  <meta property="og:image" content="RM_logo_black.png">
-  <meta property="og:type" content="website">
+  <!-- SOCIAL SHARING -->
+  <meta property="og:title"
+        content="Remy Marras | Studio Privato di Alta Performance">
+
+  <meta property="og:description"
+        content="Personal Training · EMS · Performance · Cagliari">
+
+  <meta property="og:image"
+        content="RM_logo_black.png">
+
+  <meta property="og:type"
+        content="website">
 
   <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
+
   <style>
 
-    /* =========================
+    /* =====================================================
        BASE
-    ========================= */
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -104,9 +117,9 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        NAVIGATION
-    ========================= */
+    ===================================================== */
 
     nav {
       position: fixed;
@@ -116,6 +129,7 @@
       z-index: 1000;
 
       background: rgba(5, 5, 5, 0.92);
+
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
 
@@ -126,12 +140,11 @@
       max-width: 1300px;
       margin: auto;
       padding: 9px 6%;
+      min-height: 76px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      min-height: 76px;
     }
 
     .brand {
@@ -155,18 +168,18 @@
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #bbb;
+      color: #999;
       transition: 0.3s;
     }
 
     .nav-links a:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
 
-    /* =========================
+    /* =====================================================
        BUTTONS
-    ========================= */
+    ===================================================== */
 
     .buttons {
       display: flex;
@@ -178,7 +191,6 @@
     .button {
       display: inline-block;
       padding: 15px 24px;
-
       border: 1px solid #777;
 
       font-size: 0.7rem;
@@ -189,21 +201,21 @@
     }
 
     .button-primary {
-      background: #fff;
-      color: #000;
-      border-color: #fff;
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
     }
 
     .button:hover {
-      background: #ddd;
-      color: #000;
-      border-color: #ddd;
+      background: #dddddd;
+      color: #000000;
+      border-color: #dddddd;
     }
 
 
-    /* =========================
+    /* =====================================================
        HERO
-    ========================= */
+    ===================================================== */
 
     .hero {
       min-height: 100vh;
@@ -221,13 +233,14 @@
           90deg,
           rgba(0,0,0,1) 0%,
           rgba(0,0,0,0.96) 25%,
-          rgba(0,0,0,0.75) 52%,
-          rgba(0,0,0,0.22) 100%
+          rgba(0,0,0,0.74) 52%,
+          rgba(0,0,0,0.18) 100%
         ),
         url("remy.png");
 
       background-size: cover;
       background-position: 70% center;
+      background-repeat: no-repeat;
     }
 
     .hero::after {
@@ -239,7 +252,7 @@
         linear-gradient(
           0deg,
           rgba(0,0,0,0.55) 0%,
-          transparent 35%,
+          transparent 38%,
           rgba(0,0,0,0.08) 100%
         );
 
@@ -273,15 +286,15 @@
 
       font-size: clamp(1rem, 2vw, 1.35rem);
       letter-spacing: 0.16em;
-
       text-transform: uppercase;
-      color: #fff;
+
+      color: #ffffff;
     }
 
 
-    /* =========================
+    /* =====================================================
        INTRO
-    ========================= */
+    ===================================================== */
 
     .intro {
       text-align: center;
@@ -319,9 +332,9 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        SERVICES
-    ========================= */
+    ===================================================== */
 
     .services {
       background: #090909;
@@ -334,7 +347,6 @@
       grid-template-columns: repeat(3, 1fr);
 
       gap: 1px;
-
       background: #262626;
     }
 
@@ -357,9 +369,9 @@
     }
 
 
-    /* =========================
-       TECHNOLOGY
-    ========================= */
+    /* =====================================================
+       TECHNOLOGY / EMS
+    ===================================================== */
 
     .technology {
       min-height: 650px;
@@ -378,6 +390,7 @@
 
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
 
     .technology-content {
@@ -401,13 +414,14 @@
 
       font-size: 0.8rem;
       letter-spacing: 0.25em;
+
       color: #aaa;
     }
 
 
-    /* =========================
+    /* =====================================================
        ABOUT REMY
-    ========================= */
+    ===================================================== */
 
     .about-grid {
       display: grid;
@@ -419,16 +433,13 @@
     .about-image {
       min-height: 650px;
 
-      background:
-        linear-gradient(
-          0deg,
-          rgba(0,0,0,0.25),
-          rgba(0,0,0,0.02)
-        ),
-        url("remy.png");
+      background-image: url("remy.png");
 
       background-size: cover;
-      background-position: center;
+      background-position: center 35%;
+      background-repeat: no-repeat;
+
+      border: 1px solid #151515;
     }
 
     .about-copy p {
@@ -437,9 +448,9 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        STUDIO
-    ========================= */
+    ===================================================== */
 
     .studio {
       background: #090909;
@@ -475,13 +486,12 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        FINAL CTA
-    ========================= */
+    ===================================================== */
 
     .cta {
       text-align: center;
-
       padding-top: 130px;
       padding-bottom: 130px;
     }
@@ -495,15 +505,13 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        FOOTER
-    ========================= */
+    ===================================================== */
 
     footer {
       padding: 70px 7% 110px;
-
       text-align: center;
-
       border-top: 1px solid #222;
     }
 
@@ -521,34 +529,47 @@
 
     .footer-slogan {
       margin-top: 40px;
-
       font-size: 0.75rem;
       letter-spacing: 0.2em;
-
       color: #aaa;
     }
 
     .footer-contact {
       margin-top: 35px;
-
       font-size: 0.75rem;
       color: #777;
       line-height: 1.9;
     }
 
+    .footer-legal {
+      margin-top: 25px;
+    }
 
-    /* =========================
-       MOBILE BOTTOM BAR
-    ========================= */
+    .footer-legal a {
+      color: #888;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      transition: 0.3s;
+    }
+
+    .footer-legal a:hover {
+      color: #ffffff;
+    }
+
+
+    /* =====================================================
+       MOBILE ACTION BAR
+    ===================================================== */
 
     .mobile-actions {
       display: none;
     }
 
 
-    /* =========================
+    /* =====================================================
        MOBILE
-    ========================= */
+    ===================================================== */
 
     @media (max-width: 800px) {
 
@@ -570,7 +591,6 @@
 
       .hero {
         min-height: 92vh;
-
         padding-top: 120px;
 
         background:
@@ -578,12 +598,13 @@
             0deg,
             rgba(0,0,0,0.98) 0%,
             rgba(0,0,0,0.82) 35%,
-            rgba(0,0,0,0.20) 100%
+            rgba(0,0,0,0.18) 100%
           ),
           url("remy.png");
 
         background-size: cover;
         background-position: 58% center;
+        background-repeat: no-repeat;
       }
 
       .hero-content {
@@ -618,7 +639,7 @@
 
       .about-image {
         min-height: 520px;
-        background-position: center;
+        background-position: center 35%;
       }
 
       .technology {
@@ -654,13 +675,12 @@
 
         font-size: 0.68rem;
         letter-spacing: 0.15em;
-
         text-transform: uppercase;
       }
 
       .mobile-actions a:first-child {
-        background: #fff;
-        color: #000;
+        background: #ffffff;
+        color: #000000;
       }
 
       .mobile-actions a:last-child {
@@ -670,15 +690,14 @@
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -692,7 +711,6 @@
         class="nav-logo">
 
     </a>
-
 
     <div class="nav-links">
 
@@ -709,9 +727,7 @@
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -736,7 +752,6 @@
         Più forte di ieri.<br>
         Pronto per domani.
       </div>
-
 
       <div class="buttons">
 
@@ -765,9 +780,7 @@
 </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -782,17 +795,17 @@
       Il tuo obiettivo.
     </h2>
 
-    <div
-      class="silver-line"
-      style="margin:25px auto;">
+    <div class="silver-line"
+         style="margin:25px auto;">
     </div>
 
     <p class="intro-text">
+
       Un allenamento costruito intorno a te,
       in uno studio privato dove ogni sessione
       è dedicata al tuo percorso.
-    </p>
 
+    </p>
 
     <div class="benefits">
 
@@ -807,7 +820,6 @@
 
       </div>
 
-
       <div class="benefit">
 
         <h3>Tempo</h3>
@@ -819,7 +831,6 @@
         </p>
 
       </div>
-
 
       <div class="benefit">
 
@@ -839,9 +850,7 @@
 </section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- SERVICES -->
 
 <section class="services" id="servizi">
 
@@ -856,9 +865,7 @@
       Il tuo.
     </h2>
 
-
     <div class="service-grid">
-
 
       <div class="service">
 
@@ -873,7 +880,6 @@
 
       </div>
 
-
       <div class="service">
 
         <div class="service-number">02</div>
@@ -887,7 +893,6 @@
 
       </div>
 
-
       <div class="service">
 
         <div class="service-number">03</div>
@@ -900,7 +905,6 @@
         </p>
 
       </div>
-
 
       <div class="service">
 
@@ -917,14 +921,11 @@
 
       </div>
 
-
       <div class="service">
 
         <div class="service-number">05</div>
 
-        <h3>
-          Prevenzione
-        </h3>
+        <h3>Prevenzione</h3>
 
         <p>
           Percorsi orientati alla prevenzione
@@ -932,7 +933,6 @@
         </p>
 
       </div>
-
 
       <div class="service">
 
@@ -949,7 +949,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -957,9 +956,7 @@
 </section>
 
 
-<!-- =========================
-     TECHNOLOGY
-========================= -->
+<!-- EMS TECHNOLOGY -->
 
 <section class="technology" id="tecnologia">
 
@@ -976,7 +973,6 @@
         si adatta a te.
       </h2>
 
-
       <div class="tech-stat">
 
         Oltre 300 muscoli.
@@ -987,12 +983,13 @@
 
       </div>
 
-
       <p>
+
         La tecnologia EMS si integra
         con il personal training per creare
         sessioni altamente personalizzate,
         efficienti e controllate.
+
       </p>
 
     </div>
@@ -1002,9 +999,7 @@
 </section>
 
 
-<!-- =========================
-     REMY
-========================= -->
+<!-- REMY -->
 
 <section id="remy">
 
@@ -1012,9 +1007,7 @@
 
     <div class="about-grid">
 
-
       <div class="about-image"></div>
-
 
       <div class="about-copy">
 
@@ -1028,7 +1021,6 @@
         </h2>
 
         <div class="silver-line"></div>
-
 
         <p>
           Ogni persona parte da un punto diverso
@@ -1057,9 +1049,7 @@
 </section>
 
 
-<!-- =========================
-     STUDIO
-========================= -->
+<!-- STUDIO -->
 
 <section class="studio" id="studio">
 
@@ -1073,7 +1063,6 @@
       Il tuo spazio.<br>
       Il tuo allenamento.
     </h2>
-
 
     <div class="studio-grid">
 
@@ -1095,15 +1084,18 @@
 
     </div>
 
-
     <div class="address">
 
       <p>
+
         REMY MARRAS<br>
+
         Studio Privato di Alta Performance<br><br>
 
         Via Garigliano 11<br>
+
         Cagliari
+
       </p>
 
     </div>
@@ -1113,9 +1105,7 @@
 </section>
 
 
-<!-- =========================
-     FINAL CTA
-========================= -->
+<!-- FINAL CTA -->
 
 <section class="cta" id="contatti">
 
@@ -1134,7 +1124,6 @@
       Scegli direttamente il giorno e l'orario
       più comodo per te.
     </p>
-
 
     <div class="buttons">
 
@@ -1161,16 +1150,18 @@
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <img
-    src="RM_logo_black.png"
-    alt="Remy Marras"
-    class="footer-logo">
+  <a href="#home">
+
+    <img
+      src="RM_logo_black.png"
+      alt="Remy Marras"
+      class="footer-logo">
+
+  </a>
 
   <div class="footer-title">
     STUDIO PRIVATO DI ALTA PERFORMANCE
@@ -1190,12 +1181,18 @@
 
   </div>
 
+  <div class="footer-legal">
+
+    <a href="privacy.html">
+      Privacy & Cookie Policy
+    </a>
+
+  </div>
+
 </footer>
 
 
-<!-- =========================
-     MOBILE ACTION BAR
-========================= -->
+<!-- MOBILE ACTION BAR -->
 
 <div class="mobile-actions">
 
