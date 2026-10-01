@@ -10,16 +10,17 @@
   <meta name="description"
         content="Remy Marras – Studio Privato di Alta Performance a Cagliari. Personal Training, WB-EMS, preparazione atletica, valutazione funzionale e massaggi personalizzati.">
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
   <style>
 
-    /* =========================================
+    /* =========================
        BASE
-    ========================================= */
+    ========================= */
 
     * {
       box-sizing: border-box;
@@ -93,9 +94,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        NAVIGATION
-    ========================================= */
+    ========================= */
 
     nav {
       position: fixed;
@@ -104,25 +105,34 @@
       width: 100%;
       z-index: 1000;
 
-      background: rgba(5, 5, 5, 0.88);
+      background: rgba(5, 5, 5, 0.90);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
       border-bottom: 1px solid #1d1d1d;
     }
 
     .nav-inner {
       max-width: 1300px;
       margin: auto;
-      padding: 18px 6%;
+      padding: 10px 6%;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      min-height: 80px;
     }
 
     .brand {
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 62px;
+      width: auto;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -144,9 +154,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        BUTTONS
-    ========================================= */
+    ========================= */
 
     .buttons {
       display: flex;
@@ -181,9 +191,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        HERO
-    ========================================= */
+    ========================= */
 
     .hero {
       min-height: 100vh;
@@ -191,7 +201,7 @@
       display: flex;
       align-items: center;
 
-      padding-top: 130px;
+      padding-top: 150px;
 
       position: relative;
       overflow: hidden;
@@ -199,11 +209,11 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,0.95) 0%,
-          rgba(0,0,0,0.75) 45%,
-          rgba(0,0,0,0.3) 100%
+          rgba(0,0,0,0.96) 0%,
+          rgba(0,0,0,0.80) 45%,
+          rgba(0,0,0,0.35) 100%
         ),
-        url("assets/remy-hero.jpg");
+        url("remy-hero.jpg");
 
       background-size: cover;
       background-position: center;
@@ -213,6 +223,12 @@
       max-width: 780px;
       position: relative;
       z-index: 2;
+    }
+
+    .hero-logo {
+      width: 210px;
+      height: auto;
+      margin-bottom: 35px;
     }
 
     .hero h1 {
@@ -242,9 +258,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        INTRO / BENEFITS
-    ========================================= */
+    ========================= */
 
     .intro {
       text-align: center;
@@ -282,9 +298,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        SERVICES
-    ========================================= */
+    ========================= */
 
     .services {
       background: #090909;
@@ -304,7 +320,6 @@
     .service {
       background: #090909;
       padding: 45px 35px;
-
       min-height: 190px;
     }
 
@@ -316,15 +331,14 @@
 
     .service h3 {
       margin: 22px 0 12px;
-
       font-size: 1rem;
       letter-spacing: 0.12em;
     }
 
 
-    /* =========================================
+    /* =========================
        TECHNOLOGY
-    ========================================= */
+    ========================= */
 
     .technology {
       min-height: 650px;
@@ -338,7 +352,7 @@
           rgba(0,0,0,0.98),
           rgba(0,0,0,0.65)
         ),
-        url("assets/ems.jpg");
+        url("ems.jpg");
 
       background-size: cover;
       background-position: center;
@@ -369,9 +383,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        REMY
-    ========================================= */
+    ========================= */
 
     .about-grid {
       display: grid;
@@ -388,7 +402,7 @@
           rgba(0,0,0,0.05),
           rgba(0,0,0,0.5)
         ),
-        url("assets/remy.jpg");
+        url("remy.jpg");
 
       background-size: cover;
       background-position: center;
@@ -399,9 +413,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        STUDIO
-    ========================================= */
+    ========================= */
 
     .studio {
       background: #090909;
@@ -438,9 +452,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        CTA
-    ========================================= */
+    ========================= */
 
     .cta {
       text-align: center;
@@ -458,29 +472,28 @@
     }
 
 
-    /* =========================================
+    /* =========================
        FOOTER
-    ========================================= */
+    ========================= */
 
     footer {
-      padding: 55px 7% 110px;
+      padding: 65px 7% 110px;
 
       text-align: center;
 
       border-top: 1px solid #222;
     }
 
-    .footer-brand {
-      font-size: 1.1rem;
-      letter-spacing: 0.25em;
+    .footer-logo {
+      width: 180px;
+      height: auto;
+      margin: 0 auto 25px;
     }
 
-    .footer-subtitle {
-      margin-top: 10px;
-
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
-      color: #777;
+    .footer-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      color: #888;
     }
 
     .footer-slogan {
@@ -500,23 +513,31 @@
     }
 
 
-    /* =========================================
-       MOBILE BOTTOM ACTION BAR
-    ========================================= */
+    /* =========================
+       MOBILE ACTIONS
+    ========================= */
 
     .mobile-actions {
       display: none;
     }
 
 
-    /* =========================================
+    /* =========================
        MOBILE
-    ========================================= */
+    ========================= */
 
     @media (max-width: 800px) {
 
       section {
         padding: 75px 7%;
+      }
+
+      .nav-inner {
+        min-height: 70px;
+      }
+
+      .nav-logo {
+        height: 52px;
       }
 
       .nav-links {
@@ -525,7 +546,6 @@
 
       .hero {
         min-height: 92vh;
-
         background-position: 65% center;
       }
 
@@ -609,16 +629,17 @@
 <body>
 
 
-<!-- =========================================
-     NAVIGATION
-========================================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
   <div class="nav-inner">
 
     <a href="#home" class="brand">
-      REMY MARRAS
+      <img
+        src="RM_logo_black.png"
+        alt="Remy Marras"
+        class="nav-logo">
     </a>
 
     <div class="nav-links">
@@ -636,9 +657,7 @@
 </nav>
 
 
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -666,16 +685,14 @@
 
       <div class="buttons">
 
-        <!-- REPLACE WITH GOOGLE CALENDAR LINK -->
         <a
-          href="https://calendar.app.google/kALs8PSFg6keCiuM9"
+          href="YOUR-GOOGLE-CALENDAR-LINK"
           class="button button-primary"
           target="_blank"
           rel="noopener">
           Prenota
         </a>
 
-        <!-- REMY WHATSAPP -->
         <a
           href="https://wa.me/393488945122"
           class="button"
@@ -693,9 +710,7 @@
 </section>
 
 
-<!-- =========================================
-     PROPOSITION
-========================================= -->
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -710,12 +725,16 @@
       Il tuo obiettivo.
     </h2>
 
-    <div class="silver-line" style="margin:25px auto;"></div>
+    <div class="silver-line"
+         style="margin:25px auto;">
+    </div>
 
     <p class="intro-text">
+
       Un allenamento costruito intorno a te,
       in uno studio privato dove ogni sessione
       è dedicata al tuo percorso.
+
     </p>
 
 
@@ -764,9 +783,7 @@
 </section>
 
 
-<!-- =========================================
-     SERVICES
-========================================= -->
+<!-- SERVICES -->
 
 <section class="services" id="servizi">
 
@@ -830,7 +847,9 @@
 
         <div class="service-number">04</div>
 
-        <h3>Valutazione Corporea e Funzionale</h3>
+        <h3>
+          Valutazione Corporea e Funzionale
+        </h3>
 
         <p>
           Partire dal tuo punto di partenza
@@ -844,7 +863,9 @@
 
         <div class="service-number">05</div>
 
-        <h3>Prevenzione</h3>
+        <h3>
+          Prevenzione
+        </h3>
 
         <p>
           Percorsi orientati alla prevenzione
@@ -858,7 +879,9 @@
 
         <div class="service-number">06</div>
 
-        <h3>Massaggi Personalizzati</h3>
+        <h3>
+          Massaggi Personalizzati
+        </h3>
 
         <p>
           Trattamenti personalizzati
@@ -874,9 +897,7 @@
 </section>
 
 
-<!-- =========================================
-     TECHNOLOGY
-========================================= -->
+<!-- TECHNOLOGY -->
 
 <section class="technology" id="tecnologia">
 
@@ -893,7 +914,6 @@
         si adatta a te.
       </h2>
 
-
       <div class="tech-stat">
 
         Oltre 300 muscoli.
@@ -903,7 +923,6 @@
         </span>
 
       </div>
-
 
       <p>
         La tecnologia WB-EMS si integra
@@ -919,16 +938,13 @@
 </section>
 
 
-<!-- =========================================
-     ABOUT REMY
-========================================= -->
+<!-- REMY -->
 
 <section id="remy">
 
   <div class="container">
 
     <div class="about-grid">
-
 
       <div class="about-image"></div>
 
@@ -973,9 +989,7 @@
 </section>
 
 
-<!-- =========================================
-     STUDIO
-========================================= -->
+<!-- STUDIO -->
 
 <section class="studio" id="studio">
 
@@ -1029,9 +1043,7 @@
 </section>
 
 
-<!-- =========================================
-     FINAL CTA
-========================================= -->
+<!-- FINAL CTA -->
 
 <section class="cta" id="contatti">
 
@@ -1054,9 +1066,8 @@
 
     <div class="buttons">
 
-      <!-- REPLACE WITH GOOGLE CALENDAR LINK -->
       <a
-        href="https://calendar.app.google/kALs8PSFg6keCiuM9"
+        href="YOUR-GOOGLE-CALENDAR-LINK"
         class="button button-primary"
         target="_blank"
         rel="noopener">
@@ -1078,25 +1089,22 @@
 </section>
 
 
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <div class="footer-brand">
-    REMY MARRAS
-  </div>
+  <img
+    src="RM_logo_black.png"
+    alt="Remy Marras"
+    class="footer-logo">
 
-  <div class="footer-subtitle">
+  <div class="footer-title">
     STUDIO PRIVATO DI ALTA PERFORMANCE
   </div>
-
 
   <div class="footer-slogan">
     PIÙ FORTE DI IERI, PRONTO PER DOMANI.
   </div>
-
 
   <div class="footer-contact">
 
@@ -1111,15 +1119,12 @@
 </footer>
 
 
-<!-- =========================================
-     MOBILE FIXED ACTIONS
-========================================= -->
+<!-- MOBILE ACTION BAR -->
 
 <div class="mobile-actions">
 
-  <!-- REPLACE WITH GOOGLE CALENDAR LINK -->
   <a
-    href="https://calendar.app.google/kALs8PSFg6keCiuM9"
+    href="YOUR-GOOGLE-CALENDAR-LINK"
     target="_blank"
     rel="noopener">
     Prenota
