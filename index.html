@@ -1,1217 +1,701 @@
+
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Remy Marras | Studio Privato di Alta Performance | Cagliari</title>
-
-  <meta name="description"
-        content="Remy Marras – Studio Privato di Alta Performance a Cagliari. Personal Training, EMS, preparazione atletica, valutazione funzionale e massaggi personalizzati.">
-
-  <!-- LOGO / FAVICON -->
-  <link rel="icon" type="image/png" href="RM_logo_black.png">
-  <link rel="apple-touch-icon" href="RM_logo_black.png">
-
-  <!-- SOCIAL SHARING -->
-  <meta property="og:title"
-        content="Remy Marras | Studio Privato di Alta Performance">
-
-  <meta property="og:description"
-        content="Personal Training · EMS · Performance · Cagliari">
-
-  <meta property="og:image"
-        content="RM_logo_black.png">
-
-  <meta property="og:type"
-        content="website">
-
-  <!-- FONT -->
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-
-  <style>
-
-    /* =====================================================
-       BASE
-    ===================================================== */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #050505;
-      color: #ffffff;
-      font-family: "Montserrat", Arial, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    section {
-      padding: 100px 7%;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 18px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 5vw, 4rem);
-      letter-spacing: 0.08em;
-      line-height: 1.1;
-      margin-bottom: 25px;
-    }
-
-    p {
-      color: #bdbdbd;
-    }
-
-    .silver-line {
-      width: 60px;
-      height: 1px;
-      background: #aaa;
-      margin: 25px 0;
-    }
-
-
-    /* =====================================================
-       NAVIGATION
-    ===================================================== */
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-
-      background: rgba(5, 5, 5, 0.92);
-
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid #1d1d1d;
-    }
-
-    .nav-inner {
-      max-width: 1300px;
-      margin: auto;
-      padding: 9px 6%;
-      min-height: 76px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-logo {
-      height: 58px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #999;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-    }
-
-
-    /* =====================================================
-       BUTTONS
-    ===================================================== */
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 35px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 24px;
-      border: 1px solid #777;
-
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-
-      transition: 0.3s;
-    }
-
-    .button-primary {
-      background: #ffffff;
-      color: #000000;
-      border-color: #ffffff;
-    }
-
-    .button:hover {
-      background: #dddddd;
-      color: #000000;
-      border-color: #dddddd;
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .hero {
-      min-height: 100vh;
-
-      display: flex;
-      align-items: center;
-
-      padding-top: 145px;
-
-      position: relative;
-      overflow: hidden;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,1) 0%,
-          rgba(0,0,0,0.96) 25%,
-          rgba(0,0,0,0.74) 52%,
-          rgba(0,0,0,0.18) 100%
-        ),
-        url("remy.png");
-
-      background-size: cover;
-      background-position: 70% center;
-      background-repeat: no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          0deg,
-          rgba(0,0,0,0.55) 0%,
-          transparent 38%,
-          rgba(0,0,0,0.08) 100%
-        );
-
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: clamp(3.3rem, 8vw, 7rem);
-      line-height: 0.9;
-      letter-spacing: 0.055em;
-    }
-
-    .hero-subtitle {
-      margin-top: 24px;
-
-      font-size: 0.78rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-
-      color: #bbb;
-    }
-
-    .hero-slogan {
-      margin-top: 55px;
-
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-
-      color: #ffffff;
-    }
-
-
-    /* =====================================================
-       INTRO
-    ===================================================== */
-
-    .intro {
-      text-align: center;
-    }
-
-    .intro-text {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-    }
-
-    .benefits {
-      margin-top: 70px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
-
-    .benefit {
-      padding: 45px 30px;
-      border-right: 1px solid #222;
-    }
-
-    .benefit:last-child {
-      border-right: none;
-    }
-
-    .benefit h3 {
-      letter-spacing: 0.18em;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-
-    /* =====================================================
-       SERVICES
-    ===================================================== */
-
-    .services {
-      background: #090909;
-    }
-
-    .service-grid {
-      margin-top: 55px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 1px;
-      background: #262626;
-    }
-
-    .service {
-      background: #090909;
-      padding: 45px 35px;
-      min-height: 190px;
-    }
-
-    .service-number {
-      font-size: 0.65rem;
-      color: #666;
-      letter-spacing: 0.2em;
-    }
-
-    .service h3 {
-      margin: 22px 0 12px;
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-    }
-
-
-    /* =====================================================
-       TECHNOLOGY / EMS
-    ===================================================== */
-
-    .technology {
-      min-height: 650px;
-
-      display: flex;
-      align-items: center;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,0.99),
-          rgba(0,0,0,0.82) 45%,
-          rgba(0,0,0,0.35)
-        ),
-        url("ems.jpg");
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .technology-content {
-      max-width: 650px;
-    }
-
-    .tech-stat {
-      margin: 45px 0;
-
-      font-size: clamp(2.2rem, 5vw, 4.5rem);
-      line-height: 1;
-
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .tech-stat span {
-      display: block;
-
-      margin-top: 12px;
-
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
-
-      color: #aaa;
-    }
-
-
-    /* =====================================================
-       ABOUT REMY
-    ===================================================== */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 85px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 650px;
-
-      background-image: url("remy.png");
-
-      background-size: cover;
-      background-position: center 35%;
-      background-repeat: no-repeat;
-
-      border: 1px solid #151515;
-    }
-
-    .about-copy p {
-      margin-bottom: 20px;
-      max-width: 550px;
-    }
-
-
-    /* =====================================================
-       STUDIO
-    ===================================================== */
-
-    .studio {
-      background: #090909;
-    }
-
-    .studio-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
-      margin-top: 60px;
-      border: 1px solid #222;
-    }
-
-    .studio-item {
-      padding: 40px 20px;
-      text-align: center;
-      border-right: 1px solid #222;
-    }
-
-    .studio-item:last-child {
-      border-right: none;
-    }
-
-    .studio-item strong {
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      font-weight: 400;
-    }
-
-    .address {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-
-    /* =====================================================
-       FINAL CTA
-    ===================================================== */
-
-    .cta {
-      text-align: center;
-      padding-top: 130px;
-      padding-bottom: 130px;
-    }
-
-    .cta h2 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-    }
-
-    .cta .buttons {
-      justify-content: center;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    footer {
-      padding: 70px 7% 110px;
-      text-align: center;
-      border-top: 1px solid #222;
-    }
-
-    .footer-logo {
-      width: 190px;
-      height: auto;
-      margin: 0 auto 25px;
-    }
-
-    .footer-title {
-      font-size: 0.68rem;
-      letter-spacing: 0.25em;
-      color: #888;
-    }
-
-    .footer-slogan {
-      margin-top: 40px;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      color: #aaa;
-    }
-
-    .footer-contact {
-      margin-top: 35px;
-      font-size: 0.75rem;
-      color: #777;
-      line-height: 1.9;
-    }
-
-    .footer-legal {
-      margin-top: 25px;
-    }
-
-    .footer-legal a {
-      color: #888;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.65rem;
-      transition: 0.3s;
-    }
-
-    .footer-legal a:hover {
-      color: #ffffff;
-    }
-
-
-    /* =====================================================
-       MOBILE ACTION BAR
-    ===================================================== */
-
-    .mobile-actions {
-      display: none;
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 800px) {
-
-      section {
-        padding: 75px 7%;
-      }
-
-      .nav-inner {
-        min-height: 68px;
-      }
-
-      .nav-logo {
-        height: 50px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        min-height: 92vh;
-        padding-top: 120px;
-
-        background:
-          linear-gradient(
-            0deg,
-            rgba(0,0,0,0.98) 0%,
-            rgba(0,0,0,0.82) 35%,
-            rgba(0,0,0,0.18) 100%
-          ),
-          url("remy.png");
-
-        background-size: cover;
-        background-position: 58% center;
-        background-repeat: no-repeat;
-      }
-
-      .hero-content {
-        align-self: flex-end;
-        padding-bottom: 55px;
-      }
-
-      .hero h1 {
-        font-size: 3.2rem;
-      }
-
-      .hero-slogan {
-        margin-top: 35px;
-      }
-
-      .benefits,
-      .service-grid,
-      .about-grid,
-      .studio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .benefit,
-      .studio-item {
-        border-right: none;
-        border-bottom: 1px solid #222;
-      }
-
-      .about-grid {
-        gap: 45px;
-      }
-
-      .about-image {
-        min-height: 520px;
-        background-position: center 35%;
-      }
-
-      .technology {
-        min-height: 600px;
-      }
-
-      footer {
-        padding-bottom: 110px;
-      }
-
-      .mobile-actions {
-        position: fixed;
-
-        bottom: 0;
-        left: 0;
-
-        width: 100%;
-        height: 64px;
-
-        z-index: 2000;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        background: #050505;
-        border-top: 1px solid #333;
-      }
-
-      .mobile-actions a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 0.68rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-      }
-
-      .mobile-actions a:first-child {
-        background: #ffffff;
-        color: #000000;
-      }
-
-      .mobile-actions a:last-child {
-        border-left: 1px solid #333;
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personal Trainer Cagliari | Remy Marras - Studio Privato EMS</title>
+<meta name="description" content="Cerchi un personal trainer a Cagliari? Remy Marras offre personal training, allenamento EMS e preparazione atletica in uno studio privato in Via Garigliano 11. Prenota online.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://remymarras.com/">
+<link rel="icon" type="image/png" href="RM_logo_black.png">
+<link rel="apple-touch-icon" href="RM_logo_black.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Personal Trainer Cagliari | Remy Marras">
+<meta property="og:description" content="Personal training privato, EMS e preparazione atletica a Cagliari. Via Garigliano 11. Prenota una consulenza.">
+<meta property="og:url" content="https://remymarras.com/">
+<meta property="og:image" content="https://remymarras.com/RM_logo_black.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "@id": "https://remymarras.com/#studio",
+  "name": "Remy Marras",
+  "description": "Studio privato di personal training a Cagliari con allenamento EMS, preparazione atletica e valutazione funzionale.",
+  "url": "https://remymarras.com/",
+  "image": "https://remymarras.com/remy.png",
+  "telephone": "+393488945122",
+  "email": "remy.studio.personal@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Garigliano 11",
+    "addressLocality": "Cagliari",
+    "addressRegion": "Sardegna",
+    "addressCountry": "IT"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Cagliari"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servizi di allenamento",
+    "itemListElement": [
+      {"@type": "OfferCatalog", "name": "Personal Training"},
+      {"@type": "OfferCatalog", "name": "Allenamento EMS"},
+      {"@type": "OfferCatalog", "name": "Preparazione Atletica"}
+    ]
+  }
+}
+</script>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: #050505;
+  color: #fff;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+section { padding: 100px 7%; scroll-margin-top: 76px; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; }
+.eyebrow {
+  font-size: .72rem;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 18px;
+}
+h1, h2, h3 { font-weight: 400; text-transform: uppercase; }
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: .08em;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+p { color: #bdbdbd; }
+.silver-line {
+  width: 60px;
+  height: 1px;
+  background: #aaa;
+  margin: 25px 0;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(5,5,5,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1d1d1d;
+}
+.nav-inner {
+  max-width: 1300px;
+  margin: auto;
+  padding: 9px 6%;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; }
+.nav-logo { height: 58px; width: auto; object-fit: contain; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: .68rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #999;
+  transition: .3s;
+}
+.nav-links a:hover { color: #fff; }
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 24px;
+  border: 1px solid #777;
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.button-primary {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+.button:hover {
+  background: #ddd;
+  color: #000;
+  border-color: #ddd;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 145px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,.96) 25%,
+      rgba(0,0,0,.74) 52%,
+      rgba(0,0,0,.18) 100%),
+    url("remy.png");
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+    rgba(0,0,0,.55) 0%,
+    transparent 38%,
+    rgba(0,0,0,.08) 100%);
+  pointer-events: none;
+}
+.hero-content {
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: clamp(3.3rem, 8vw, 7rem);
+  line-height: .9;
+  letter-spacing: .055em;
+}
+.hero-local-heading {
+  font-size: clamp(1.1rem, 2.3vw, 1.65rem);
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-top: 24px;
+  color: #fff;
+}
+.hero-subtitle {
+  margin-top: 24px;
+  font-size: .78rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #bbb;
+}
+.hero-slogan {
+  margin-top: 55px;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* INTRO */
+.intro { text-align: center; }
+.intro-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+.benefits {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+.benefit {
+  padding: 45px 30px;
+  border-right: 1px solid #222;
+}
+.benefit:last-child { border-right: none; }
+.benefit h3 {
+  letter-spacing: .18em;
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+/* SERVICES */
+.services { background: #090909; }
+.service-grid {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  background: #262626;
+}
+.service {
+  background: #090909;
+  padding: 45px 35px;
+  min-height: 190px;
+}
+.service-number {
+  font-size: .65rem;
+  color: #666;
+  letter-spacing: .2em;
+}
+.service h3 {
+  margin: 22px 0 12px;
+  font-size: 1rem;
+  letter-spacing: .12em;
+}
+
+/* EMS */
+.technology {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.99),
+      rgba(0,0,0,.82) 45%,
+      rgba(0,0,0,.35)),
+    url("ems.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.technology-content { max-width: 650px; }
+.tech-stat {
+  margin: 45px 0;
+  font-size: clamp(2.2rem,5vw,4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.tech-stat span {
+  display: block;
+  margin-top: 12px;
+  font-size: .8rem;
+  letter-spacing: .25em;
+  color: #aaa;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 85px;
+  align-items: center;
+}
+.about-image {
+  min-height: 650px;
+  background-image: url("remy.png");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  border: 1px solid #151515;
+}
+.about-copy p {
+  margin-bottom: 20px;
+  max-width: 550px;
+}
+
+/* STUDIO */
+.studio { background: #090909; }
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 60px;
+  border: 1px solid #222;
+}
+.studio-item {
+  padding: 40px 20px;
+  text-align: center;
+  border-right: 1px solid #222;
+}
+.studio-item:last-child { border-right: none; }
+.studio-item strong {
+  font-size: .75rem;
+  letter-spacing: .16em;
+  font-weight: 400;
+}
+.address { margin-top: 50px; text-align: center; }
+.address a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* FINAL CTA */
+.cta {
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.cta h2 { font-size: clamp(2.5rem,6vw,5rem); }
+.cta .buttons { justify-content: center; }
+
+/* FOOTER */
+footer {
+  padding: 70px 7% 110px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+.footer-logo {
+  width: 190px;
+  height: auto;
+  margin: 0 auto 25px;
+}
+.footer-title {
+  font-size: .68rem;
+  letter-spacing: .25em;
+  color: #888;
+}
+.footer-slogan {
+  margin-top: 40px;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  color: #aaa;
+}
+.footer-contact {
+  margin-top: 35px;
+  font-size: .75rem;
+  color: #777;
+  line-height: 1.9;
+}
+.footer-contact a { color: #aaa; }
+.footer-legal { margin-top: 25px; }
+.footer-legal a {
+  color: #888;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .65rem;
+  transition: .3s;
+}
+.footer-legal a:hover { color: #fff; }
+
+/* MOBILE */
+.mobile-actions { display: none; }
+
+@media (max-width: 800px) {
+  section { padding: 75px 7%; }
+  .nav-inner { min-height: 68px; }
+  .nav-logo { height: 50px; }
+  .nav-links { display: none; }
+  .hero {
+    min-height: 92vh;
+    padding-top: 120px;
+    background:
+      linear-gradient(0deg,
+        rgba(0,0,0,.98) 0%,
+        rgba(0,0,0,.82) 35%,
+        rgba(0,0,0,.18) 100%),
+      url("remy.png");
+    background-size: cover;
+    background-position: 58% center;
+    background-repeat: no-repeat;
+  }
+  .hero-content {
+    align-self: flex-end;
+    padding-bottom: 55px;
+  }
+  .hero h1 { font-size: 3.2rem; }
+  .hero-slogan { margin-top: 35px; }
+  .benefits,
+  .service-grid,
+  .about-grid,
+  .studio-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefit,
+  .studio-item {
+    border-right: none;
+    border-bottom: 1px solid #222;
+  }
+  .about-grid { gap: 45px; }
+  .about-image {
+    min-height: 520px;
+    background-position: center 35%;
+  }
+  .technology { min-height: 600px; }
+  footer { padding-bottom: 110px; }
+  .mobile-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 2000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #050505;
+    border-top: 1px solid #333;
+  }
+  .mobile-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .68rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+  .mobile-actions a:first-child {
+    background: #fff;
+    color: #000;
+  }
+  .mobile-actions a:last-child {
+    border-left: 1px solid #333;
+  }
+}
+</style>
 </head>
-
 
 <body>
 
-
 <!-- NAVIGATION -->
-
 <nav>
-
   <div class="nav-inner">
-
-    <a href="#home" class="brand">
-
-      <img
-        src="RM_logo_black.png"
-        alt="Remy Marras"
-        class="nav-logo">
-
+    <a href="#home" class="brand" aria-label="Remy Marras - Home">
+      <img src="RM_logo_black.png" alt="Remy Marras" class="nav-logo">
     </a>
-
     <div class="nav-links">
-
       <a href="#studio">Studio</a>
       <a href="#servizi">Servizi</a>
       <a href="#tecnologia">Tecnologia</a>
       <a href="#remy">Remy</a>
       <a href="#contatti">Contatti</a>
-
     </div>
-
   </div>
-
 </nav>
 
-
 <!-- HERO -->
-
 <section class="hero" id="home">
-
   <div class="container">
-
     <div class="hero-content">
-
-      <div class="eyebrow">
-        Studio Privato di Alta Performance
-      </div>
-
-      <h1>
-        REMY<br>
-        MARRAS
-      </h1>
-
+      <div class="eyebrow">Studio Privato di Alta Performance</div>
+      <h1>REMY<br>MARRAS</h1>
+      <p class="hero-local-heading">Personal Trainer a Cagliari</p>
       <div class="hero-subtitle">
-        Personal Training · Cagliari
+        Allenamento Personalizzato · EMS · Cagliari
       </div>
-
       <div class="hero-slogan">
         Più forte di ieri.<br>
         Pronto per domani.
       </div>
-
       <div class="buttons">
-
-        <a
-          href="https://calendar.app.google/kALs8PSFg6keCiuM9"
-          class="button button-primary"
-          target="_blank"
-          rel="noopener">
-          Prenota
-        </a>
-
-        <a
-          href="https://wa.me/393488945122"
-          class="button"
-          target="_blank"
-          rel="noopener">
-          WhatsApp
-        </a>
-
+        <a href="prenota.html" class="button button-primary">Prenota</a>
+        <a href="https://wa.me/393488945122" class="button" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
-
     </div>
-
   </div>
-
 </section>
-
 
 <!-- INTRO -->
-
 <section class="intro">
-
   <div class="container">
-
-    <div class="eyebrow">
-      Personal Training
-    </div>
-
-    <h2>
-      Il tuo tempo.<br>
-      Il tuo obiettivo.
-    </h2>
-
-    <div class="silver-line"
-         style="margin:25px auto;">
-    </div>
-
+    <div class="eyebrow">Personal Training</div>
+    <h2>Il tuo tempo.<br>Il tuo obiettivo.</h2>
+    <div class="silver-line" style="margin:25px auto;"></div>
     <p class="intro-text">
-
-      Un allenamento costruito intorno a te,
-      in uno studio privato dove ogni sessione
-      è dedicata al tuo percorso.
-
+      Cerchi un personal trainer a Cagliari? Remy Marras propone
+      allenamenti individuali in uno studio privato in Via Garigliano 11.
+      Ogni sessione è costruita sui tuoi obiettivi, con attenzione
+      al metodo, al tempo e alla privacy.
     </p>
-
     <div class="benefits">
-
       <div class="benefit">
-
         <h3>Privacy</h3>
-
-        <p>
-          Uno spazio riservato,
-          senza la confusione di una palestra affollata.
-        </p>
-
+        <p>Uno spazio riservato, senza la confusione di una palestra affollata.</p>
       </div>
-
       <div class="benefit">
-
         <h3>Tempo</h3>
-
-        <p>
-          Parcheggio privato,
-          zero attese e sessioni organizzate
-          in modo efficiente.
-        </p>
-
+        <p>Parcheggio privato, zero attese e sessioni organizzate in modo efficiente.</p>
       </div>
-
       <div class="benefit">
-
         <h3>Personalizzazione</h3>
-
-        <p>
-          Metodo, intensità e tecnologia
-          scelti in funzione dei tuoi obiettivi.
-        </p>
-
+        <p>Metodo, intensità e tecnologia scelti in funzione dei tuoi obiettivi.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-
 <!-- SERVICES -->
-
 <section class="services" id="servizi">
-
   <div class="container">
-
-    <div class="eyebrow">
-      Servizi
-    </div>
-
-    <h2>
-      Un percorso.<br>
-      Il tuo.
-    </h2>
-
+    <div class="eyebrow">Servizi</div>
+    <h2>Un percorso.<br>Il tuo.</h2>
     <div class="service-grid">
 
       <div class="service">
-
         <div class="service-number">01</div>
-
         <h3>Personal Training</h3>
-
-        <p>
-          Allenamento personalizzato
-          costruito sui tuoi obiettivi.
-        </p>
-
+        <p>Allenamento personalizzato costruito sui tuoi obiettivi.</p>
       </div>
 
       <div class="service">
-
         <div class="service-number">02</div>
-
         <h3>EMS</h3>
-
-        <p>
-          Tecnologia avanzata integrata
-          nel tuo percorso di allenamento.
-        </p>
-
+        <p>Tecnologia avanzata integrata nel tuo percorso di allenamento.</p>
       </div>
 
       <div class="service">
-
         <div class="service-number">03</div>
-
         <h3>Preparazione Atletica</h3>
-
-        <p>
-          Lavoro mirato su forza,
-          condizionamento e performance.
-        </p>
-
+        <p>Lavoro mirato su forza, condizionamento e performance.</p>
       </div>
 
       <div class="service">
-
         <div class="service-number">04</div>
-
-        <h3>
-          Valutazione Corporea e Funzionale
-        </h3>
-
-        <p>
-          Conoscere il tuo punto di partenza
-          per costruire il percorso giusto.
-        </p>
-
+        <h3>Valutazione Corporea e Funzionale</h3>
+        <p>Conoscere il tuo punto di partenza per costruire il percorso giusto.</p>
       </div>
 
       <div class="service">
-
         <div class="service-number">05</div>
-
         <h3>Prevenzione</h3>
-
-        <p>
-          Percorsi orientati alla prevenzione
-          e al recupero muscolare.
-        </p>
-
+        <p>Percorsi orientati alla prevenzione e al recupero muscolare.</p>
       </div>
 
       <div class="service">
-
         <div class="service-number">06</div>
-
-        <h3>
-          Massaggi Personalizzati
-        </h3>
-
-        <p>
-          Trattamenti personalizzati
-          integrati nel percorso individuale.
-        </p>
-
+        <h3>Massaggi Personalizzati</h3>
+        <p>Trattamenti personalizzati integrati nel percorso individuale.</p>
       </div>
 
     </div>
-
   </div>
-
 </section>
-
 
 <!-- EMS TECHNOLOGY -->
-
 <section class="technology" id="tecnologia">
-
   <div class="container">
-
     <div class="technology-content">
-
-      <div class="eyebrow">
-        EMS · AI · Analisi
-      </div>
-
-      <h2>
-        Tecnologia che<br>
-        si adatta a te.
-      </h2>
-
+      <div class="eyebrow">EMS · Personal Training · Cagliari</div>
+      <h2>Tecnologia che<br>si adatta a te.</h2>
       <div class="tech-stat">
-
-        Oltre 300 muscoli.
-
-        <span>
-          Simultaneamente.
-        </span>
-
+        Allenamento EMS.
+        <span>Personalizzato e guidato.</span>
       </div>
-
       <p>
-
-        La tecnologia EMS si integra
-        con il personal training per creare
-        sessioni altamente personalizzate,
+        La tecnologia EMS si integra con il personal training
+        per creare sessioni altamente personalizzate,
         efficienti e controllate.
-
       </p>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- REMY -->
-
+<!-- ABOUT REMY -->
 <section id="remy">
-
   <div class="container">
-
     <div class="about-grid">
-
-      <div class="about-image"></div>
-
+      <div class="about-image" role="img" aria-label="Remy Marras, personal trainer a Cagliari"></div>
       <div class="about-copy">
-
-        <div class="eyebrow">
-          Il tuo Personal Trainer
-        </div>
-
-        <h2>
-          Remy<br>
-          Marras
-        </h2>
-
+        <div class="eyebrow">Il tuo Personal Trainer</div>
+        <h2>Remy<br>Marras</h2>
         <div class="silver-line"></div>
-
-        <p>
-          Ogni persona parte da un punto diverso
-          e ha obiettivi diversi.
-        </p>
-
+        <p>Ogni persona parte da un punto diverso e ha obiettivi diversi.</p>
         <p>
           Per questo il percorso nasce dall'ascolto,
-          dalla valutazione e da un allenamento
-          costruito individualmente.
+          dalla valutazione e da un allenamento costruito individualmente.
         </p>
-
         <p>
-          Metodo, esperienza e tecnologia diventano
-          strumenti per raggiungere il tuo obiettivo:
-          non un programma standard,
+          Metodo, esperienza e tecnologia diventano strumenti
+          per raggiungere il tuo obiettivo: non un programma standard,
           ma il tuo percorso.
         </p>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
 
 <!-- STUDIO -->
-
 <section class="studio" id="studio">
-
   <div class="container">
-
-    <div class="eyebrow">
-      Cagliari
-    </div>
-
-    <h2>
-      Il tuo spazio.<br>
-      Il tuo allenamento.
-    </h2>
-
+    <div class="eyebrow">Cagliari</div>
+    <h2>Il tuo spazio.<br>Il tuo allenamento.</h2>
     <div class="studio-grid">
-
-      <div class="studio-item">
-        <strong>STUDIO PRIVATO</strong>
-      </div>
-
-      <div class="studio-item">
-        <strong>PARCHEGGIO PRIVATO</strong>
-      </div>
-
-      <div class="studio-item">
-        <strong>CLIMATIZZATO</strong>
-      </div>
-
-      <div class="studio-item">
-        <strong>ZERO ATTESE</strong>
-      </div>
-
+      <div class="studio-item"><strong>STUDIO PRIVATO</strong></div>
+      <div class="studio-item"><strong>PARCHEGGIO PRIVATO</strong></div>
+      <div class="studio-item"><strong>CLIMATIZZATO</strong></div>
+      <div class="studio-item"><strong>ZERO ATTESE</strong></div>
     </div>
-
     <div class="address">
-
       <p>
-
         REMY MARRAS<br>
-
         Studio Privato di Alta Performance<br><br>
-
         Via Garigliano 11<br>
-
-        Cagliari
-
+        Cagliari<br><br>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Garigliano+11+Cagliari"
+           target="_blank" rel="noopener noreferrer">
+          Indicazioni stradali su Google Maps
+        </a>
       </p>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- FINAL CTA -->
-
+<!-- CONTACT / BOOKING -->
 <section class="cta" id="contatti">
-
   <div class="container">
-
-    <div class="eyebrow">
-      Inizia
-    </div>
-
-    <h2>
-      Pronto a<br>
-      iniziare?
-    </h2>
-
-    <p>
-      Scegli direttamente il giorno e l'orario
-      più comodo per te.
-    </p>
-
+    <div class="eyebrow">Inizia</div>
+    <h2>Pronto a<br>iniziare?</h2>
+    <p>Scegli direttamente il giorno e l'orario più comodo per te.</p>
     <div class="buttons">
-
-      <a
-        href="https://calendar.app.google/kALs8PSFg6keCiuM9"
-        class="button button-primary"
-        target="_blank"
-        rel="noopener">
-        Prenota Online
-      </a>
-
-      <a
-        href="https://wa.me/393488945122"
-        class="button"
-        target="_blank"
-        rel="noopener">
+      <a href="prenota.html" class="button button-primary">Prenota Online</a>
+      <a href="https://wa.me/393488945122"
+         class="button" target="_blank" rel="noopener noreferrer">
         Scrivimi su WhatsApp
       </a>
-
     </div>
-
   </div>
-
 </section>
 
-
 <!-- FOOTER -->
-
 <footer>
-
   <a href="#home">
-
-    <img
-      src="RM_logo_black.png"
-      alt="Remy Marras"
-      class="footer-logo">
-
+    <img src="RM_logo_black.png"
+         alt="Remy Marras, personal trainer a Cagliari"
+         class="footer-logo">
   </a>
-
-  <div class="footer-title">
-    STUDIO PRIVATO DI ALTA PERFORMANCE
-  </div>
-
-  <div class="footer-slogan">
-    PIÙ FORTE DI IERI, PRONTO PER DOMANI.
-  </div>
-
+  <div class="footer-title">STUDIO PRIVATO DI ALTA PERFORMANCE</div>
+  <div class="footer-slogan">PIÙ FORTE DI IERI, PRONTO PER DOMANI.</div>
   <div class="footer-contact">
-
     Via Garigliano 11 · Cagliari<br>
-
-    +39 348 894 5122<br>
-
-    remy.studio.personal@gmail.com
-
+    <a href="tel:+393488945122">+39 348 894 5122</a><br>
+    <a href="mailto:remy.studio.personal@gmail.com">remy.studio.personal@gmail.com</a>
   </div>
-
   <div class="footer-legal">
-
-    <a href="privacy.html">
-      Privacy & Cookie Policy
-    </a>
-
+    <a href="privacy.html">Privacy &amp; Cookie Policy</a>
   </div>
-
 </footer>
 
-
 <!-- MOBILE ACTION BAR -->
-
 <div class="mobile-actions">
-
-  <a
-    href="https://calendar.app.google/kALs8PSFg6keCiuM9"
-    target="_blank"
-    rel="noopener">
-    Prenota
-  </a>
-
-  <a
-    href="https://wa.me/393488945122"
-    target="_blank"
-    rel="noopener">
-    WhatsApp
-  </a>
-
+  <a href="prenota.html">Prenota</a>
+  <a href="https://wa.me/393488945122"
+     target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </div>
-
 
 </body>
 </html>
